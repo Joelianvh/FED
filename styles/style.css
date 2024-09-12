@@ -17,10 +17,13 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+
 }
 
 
-
+button.poep{
+	color: black;
+}
 
 
 /****************/
@@ -28,4 +31,12 @@
 /****************/
 
 /* jouw code */
-
+li:nth-of-type(3) p{
+	transition: all ease 2s;
+  }
+  
+  li:nth-of-type(3) p.anders {
+	background-color: crimson;
+	transform: rotate(360deg)
+  }
+  

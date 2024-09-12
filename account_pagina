@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jouw IKEA Family</title>
+</head>
+<body>
+    <header>
+		<div>"recycle" logo <p>Retour & recycle service matrassen</p>
+		</div>
+		<div>
+			<img src="" alt="logo Ikea">
+			<div>
+				<ul>
+					<li>profiel</li>
+					<li>favorieten</li>
+					<li>winkelwagen</li>
+					<li>hamburger menu</li>
+				</ul>
+			</div>
+		</div>
+		<div>
+			"Search icon"
+			<p>Waar ben je naar opzoek?</p>
+			<input type="text">
+			"Camera icon"
+		</div>
+		<div>
+			<button>
+				"Vrachtwagen icon"
+				<p>3828XA</p>
+			</button>
+			<Button>
+				"Winkel icon"
+				<p>Amersfoort</p>
+			</Button>
+		</div>
+	</header>
+
+
+    <main>
+
+
+
+    </main>
+
+	<footer>
+		<section>
+			<h3>Word IKEA family lid</h3>
+			<p>Als IKEA Family lid profiteer je van heel veel voordelen, zoals kortingen op veel producten en gratis
+				toegang tot workshops en evenementen.</p>
+			<p><u>Lees meer >></u></p>
+			<a href="">Word lid of log in</a>
+		</section>
+		<section>
+			<h3>Word IKEA for Business Netwerk lid</h3>
+			<p>Profiteer van een aantal unieke voordelen en services die je ondersteunen als zakelijke klant.</p>
+			<p><u>Lees meer >></u></p>
+			<a href="">Word lid of log in</a>
+		</section>
+		<div>
+			<ul>
+				<li>
+					<h3> Klantenservice</h3> <button>^</button>
+				</li>
+				<li>
+					<h3>Over Ikea</h3><button>^</button>
+				</li>
+				<li>
+					<h3>Winkelen bij ikea</h3><button>^</button>
+				</li>
+				<li>
+					<h3>IKEA Family & Business</h3><button>^</button>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li>Facebook logo</li>
+				<li>Insta logo</li>
+				<li>pinterst logo</li>
+				<li>youtube logo</li>
+			</ul>
+			<ul>
+				<li>Ideal</li>
+				<li>mastercard</li>
+				<li>Visa</li>
+				<li>Klarna</li>
+				<li>cadeaubon</li>
+				<li>American Express</li>
+				<li>Paypal</li>
+				<li>Apple pay</li>
+				<li>Oney</li>
+			</ul>
+		</div>
+		<div>
+			<button>Wijzig land</button>
+			<button>Nederlands</button>
+		</div>
+		<div>
+			<p>© Inter IKEA Systems B.V 1999-2024</p>
+			<ul>
+				<li>
+					<a href="https://www.ikea.com/nl/nl/customer-service/privacy-policy/">
+						Privacybeleid
+					</a>
+				</li>
+				<li>
+					<a href="https://www.ikea.com/nl/nl/customer-service/cookie-policy/">
+						Cookies
+					</a>
+				</li>
+				<li class="hnf-list-item">
+					<a
+						href="javascript: { if(window.ikea.cookieConsent) { ikea.cookieConsent.togglePreferenceCenter() } }">
+						Cookie-instellingen
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://www.ikea.com/nl/nl/customer-service/terms-conditions/algemene-verkoopvoorwaarden-pub7d95221d">
+						Algemene voorwaarden
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://www.ikea.com/nl/nl/customer-service/terms-conditions/gebruikersvoorwaarden-pub92fe171d">
+						Gebruikersvoorwaarden
+					</a>
+				</li>
+				<li>
+					<a href="https://www.ikea.com/nl/nl/customer-service/responsible-disclosure/">
+						Responsible Disclosure Program
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>

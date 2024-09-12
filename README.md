@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   rood
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  surface plane
  
 </details>
 
@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+    https://www.ikea.com/nl/nl/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Ikea homepagine  
+  <img src="readme-images/ikea_website-screenshot.jpg" width="375px" alt="De voorpagina van de ikea website op een samsung s24 ultra">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/ikea_family-screenshot.jpg" width="375px" alt="De family pas pagina van de ikea website op een samsung s24 ultra">
  
 </details>
 
@@ -57,7 +57,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  De alt-tekst wordt goed voorgelezen
+  icoontjes worden niet voorgelezen
+  lijntjes leest die ook voor.
+  Ikea product nummers worden opgenoemt.
+  Ikea geeft de optie voor mensen met screenreaders om lijsten over te slaan, zoals te zien is in deze afbeelding. Deze optie is er ook alleen voor als je een screenreader hebt zodat je niet door de gehele lijst hoeft te scrollen.
+  <img src="readme-images/Scherm­afbeelding 2024-09-04 om 15.32.33.png" width="375px" alt="afbeelding van de overslaan optie van de ikea website">
 
+  Bij bekijk onze services wordt bij elke service opgenoemd dat je in een lijst zit en dat je bij elke onderdeel in een nieuwe lijst terecht komt.
 </details>
 
 
@@ -89,7 +96,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Ik heb in de eerste week grotendeels van de html structuur gemaakt. Wat ik nog aan de HTML moet toevoegen zijn vooral de afbeeldingen en icoontjes.
+  Dit kan ik nu vooral doen in week 2. Ook kan ik al de correcte fonts en kleurtjes toevoegen in de :root van de css. Ook moet ik nog de html elementen toevoegen die niet direct zichtbaar zijn. zoals de hamburger menu's en bepaalde elementen die informatie vertonen als je erop klikt zoals bij buttons.
+  Wat ging goed?
+  Het overtypen van alle elementen en het indelen van de section's div's en articles
+  Wat ging fout?
+  Het maken van de html voordat ik de breakdownschets heb gemaakt. Waardoor ik veel heen en weer moest gaan in stappen.
+  <img src="readme-images/afbeelding_van_de_html_code.png"> 
 
   ### Agenda voor meeting
   samen met je groepje opstellen

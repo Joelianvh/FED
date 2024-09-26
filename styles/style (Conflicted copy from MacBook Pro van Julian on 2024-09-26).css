@@ -8,14 +8,12 @@
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
-
-
 :root {
+	/* startje */
 	--color-text-primairy:#111;
 	--color-text-secundairy: white;
 	--color-background-primairy: white;
 	--color-background-secundairy: rgb(19, 19, 19);
-	--color-background-darkmode-secundairy: rgb(36, 36, 36);
 	--orange: rgb(202, 80, 8);
 	--blue: rgb( 0, 124, 193); ;
 	--lightgray: rgb(245, 245, 245);
@@ -60,12 +58,13 @@ body{
 	margin: 0;
 	top: 0;
 	left: 0;
+
 	font-family: Noto IKEA ;
 	background-color: var(--color-background-primairy);
 	color: var(--color-text-primairy);
+
+
 }
-
-
 main{
 	padding: 1.25rem;
 }
@@ -229,8 +228,6 @@ header nav ul li details[open]{
 	background: var(--color-background-primairy);
 	transition: all 200ms ease;
 	overflow-y: scroll;
-	padding: 1.5rem 1rem 0 1rem;
-	z-index: 2;
 } 
 
 header nav ul li details[open] summary{
@@ -262,27 +259,24 @@ header div:nth-of-type(3), header nav ul li details div{
 }
 
 header nav ul li details[open] div{
-	margin-bottom: 2rem;
-	width: 70vw;
+	margin: 2rem 0 2rem 1rem;
+	width: 80vw;
 }
 header nav ul li details[open] ul{
 	border-top: solid 1px var(--gray);
-	padding: 1rem 0 0 0 ;
-
 }
-header nav ul li details[open] ul:nth-of-type(1) a{
+header nav ul li details[open] ul:nth-of-type(1){
 	font-size: var(--fontsize-h1);
 }
-header nav ul li details[open] ul:nth-of-type(2) a{
-	font-size: var(--fontsize-p);
+header nav ul li details[open] ul:nth-of-type(2){
+	font-size: var(--fontsize-h2);
 }
 
-header nav ul li details[open] ul:nth-of-type(3) a{
-	font-size: var(--fontsize-p);
-	font-weight: 400;
+header nav ul li details[open] ul:nth-of-type(3){
+	font-size: var(--fontsize-h3);
 }
 header nav ul li details[open] section{
-	border-top: solid 1px var(--gray);
+	padding: 1.5rem;
 }
 
 header nav ul li details[open] section p{
@@ -416,13 +410,11 @@ main section:first-of-type aside section{
 	flex-wrap: wrap;
 	box-shadow: 0px 4px 16px rgba(0,0,0,.1);
 
-
 }
 main section:first-of-type aside section div{
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	justify-content: space-between;
 	
 }
 
@@ -448,37 +440,9 @@ main section:first-of-type aside section div button{
 }
 
 
-main section:first-of-type aside section img{
-	height: 83px;
-	width: 83px;
-	margin-right: .75rem;
-	margin: .75rem .75rem .75rem 0;
-
+main section:first-of-type aside section canvas{
+	color: black;
 }
-.static{
-	overflow-y: hidden ;
-}
-.popup{
-	overflow: hidden;
-	animation: card 5s ease 1 forwards;
-}
-
-@keyframes card {
-	0%{
-		overflow: auto;
-	}
-	100%{
-		transform: rotate(90deg) scale(1.2);
-		background-color: #111;
-		top: 0;
-		left: 0;
-		z-index: 2;
-		display: block !important;
-		overflow: auto;
-
-	}
-}
-
 /* ul 2 */
 
 main > ul:nth-of-type(2) li{
@@ -1029,13 +993,11 @@ main > div:last-of-type div *{
 /******************/ 
 
 footer{
+	padding-top: 3rem;
 	background-color: var(--lightgray);
 }
-footer h3{
-	margin: 0;
-}
 footer > section{
-	padding: 3rem 1rem 3rem 1rem;
+	padding: 0 1rem 0 1rem;
 }
 
 footer > section a{
@@ -1046,8 +1008,7 @@ footer > section a{
 footer > ul{
 	display: flex;
 	flex-direction: column;
-	padding: 0 1rem 1rem 1rem;
-	margin: 0;
+	padding: 0 1rem 0 1rem;
 }
 
 footer > ul > li{
@@ -1162,16 +1123,12 @@ footer div:nth-of-type(2) div select{
 	border: unset;
 	font-weight: 700;
 }
-footer div:nth-of-type(3) > p{
-	padding: .8rem 0 .8rem .75rem;
-	margin: 0;
-}
+
 footer div:nth-of-type(3) ul{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	padding-left: .75rem;
-	margin-bottom: 0;
 }
 footer div:nth-of-type(3) ul li{
 	margin-right: 1.25rem;
@@ -1185,21 +1142,6 @@ footer div:nth-of-type(3) ul li a{
 /******************/
 /* footer styling */
 /******************/ 
-/* @media (prefers-color-scheme: light){
-	body{
-		background-color: var(--color-background-primairy) ;
-		color: var(--color-text-primairy) ;
-}
-}
-@media (prefers-color-scheme: dark){
 
-	body *{
-		background-color: var(--color-background-secundairy) ;
-		color: var(--color-text-secundairy) ;
-		fill: var(--color-text-secundairy);
-	}
-	footer *, li *, li, article, article *{
-		background-color: var(--color-background-darkmode-secundairy) ;
-	}
-} */
+
 

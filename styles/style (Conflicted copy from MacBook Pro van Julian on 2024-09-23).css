@@ -8,27 +8,21 @@
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
-
-
 :root {
+	/* startje */
 	--color-text-primairy:#111;
 	--color-text-secundairy: white;
 	--color-background-primairy: white;
 	--color-background-secundairy: rgb(19, 19, 19);
-	--color-background-darkmode-secundairy: rgb(36, 36, 36);
 	--orange: rgb(202, 80, 8);
 	--blue: rgb( 0, 124, 193); ;
 	--lightgray: rgb(245, 245, 245);
-	--gray:  rgb(118, 118, 118);
 	--darkgray: #484848;
 	--red:#cf2219;
 	--yellow:#fdd524;
 	--green:#2a943c;
-	--fontsize-p:.875rem;
-	--fontsize-h1:1.5rem;
-	--fontsize-h2:1.125rem;
-	--fontsize-h3:1rem;
-	--fontsize-a:.75rem;
+	--space-s: 1em;
+	--space-m: 1.5em;
 
 }
 
@@ -60,12 +54,13 @@ body{
 	margin: 0;
 	top: 0;
 	left: 0;
+
 	font-family: Noto IKEA ;
 	background-color: var(--color-background-primairy);
 	color: var(--color-text-primairy);
+
+
 }
-
-
 main{
 	padding: 1.25rem;
 }
@@ -104,33 +99,12 @@ a{
 	background-color:var(--color-background-primairy) ;
 	color: var(--color-text-primairy);
 }
-::-webkit-scrollbar{
-
-	width: 3px;
-	height: 2px;
-}
-::-webkit-scrollbar-track{
-	background-color: rgb(210, 209, 209);
-	width: 3px;
-}
-
-::-webkit-scrollbar-thumb{
-	background:var(--color-text-primairy);
-}
 
 img{
-	width: 100%;
+	width: 80vw;
 	height: auto;
 }
-input{
-	width: 100%;
-	margin: 0 auto;
-	border: none;
-	font-size: 1rem;
-	background-color: var(--lightgray);
-	text-align: left;
 
-}
 /********************/
 /* Algemene styling */
 /********************/
@@ -148,7 +122,7 @@ header{
 
 
 }
-header > div:first-of-type{
+header div:first-of-type{
 	background-color:#111;
 	color: var(--color-text-secundairy);
 	text-align: left;
@@ -174,8 +148,8 @@ header nav{
 	flex-direction: row;
 	justify-content: space-between;
 	padding: 0 1.25rem;
-	margin-top: .5rem;
-	margin-bottom: .5rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
 	background-color: var(--color-background-primairy);
 }
 
@@ -188,22 +162,18 @@ header nav{
 }
 
 header nav img{
-	min-width: 10%;
-	max-width: 35%;
+	min-width: 15vw;
 }
 
 header nav ul{
 	display: flex;
-	align-items: center;
 }
 
 header nav ul li{
-	padding:0.5rem;
+	padding:0.5rem	
+}
 
-}
-header nav ul li a{
-	padding: 0;
-}
+
 header nav ul li details{
 	left: -100vw;
 	transition: all 200ms ease;
@@ -211,13 +181,13 @@ header nav ul li details{
 
 header nav ul li details summary{
 	list-style: none;
-
+	top: 0;
+	left: 0;
 }
 
 header nav ul li details ul{
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
 }
 
 header nav ul li details[open]{
@@ -227,15 +197,11 @@ header nav ul li details[open]{
 	left: 0;
 	top: 0;
 	background: var(--color-background-primairy);
-	transition: all 200ms ease;
-	overflow-y: scroll;
-	padding: 1.5rem 1rem 0 1rem;
-	z-index: 2;
+	transition: left 200ms ease;
 } 
 
 header nav ul li details[open] summary{
-	width: fit-content;
-	position: fixed	;
+	display: flex;
 	top: 2em;
 	right: 1.5em;
 }
@@ -246,7 +212,8 @@ header div:nth-of-type(2){
 	padding:0;
 }
 
-header div:nth-of-type(3), header nav ul li details div{
+header div:nth-of-type(3){
+	/* background-color: wheat; */
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -261,67 +228,14 @@ header div:nth-of-type(3), header nav ul li details div{
 	background-color: var(--lightgray);
 }
 
-header nav ul li details[open] div{
-	margin-bottom: 2rem;
-	width: 70vw;
-}
-header nav ul li details[open] ul{
-	border-top: solid 1px var(--gray);
-	padding: 1rem 0 0 0 ;
+header div:nth-of-type(3) input{
+	width: 100%;
+	margin: 0 auto;
+	border: none;
+	font-size: 1rem;
+	background-color: var(--lightgray);
+	text-align: left;
 
-}
-header nav ul li details[open] ul:nth-of-type(1) a{
-	font-size: var(--fontsize-h1);
-}
-header nav ul li details[open] ul:nth-of-type(2) a{
-	font-size: var(--fontsize-p);
-}
-
-header nav ul li details[open] ul:nth-of-type(3) a{
-	font-size: var(--fontsize-p);
-	font-weight: 400;
-}
-header nav ul li details[open] section{
-	border-top: solid 1px var(--gray);
-}
-
-header nav ul li details[open] section p{
-	font-weight: 700;
-}
-
-header nav ul li details[open] section a{
-	text-decoration: underline;
-	font-weight: 400;
-	font-size: var(--fontsize-p);
-}
-header nav ul li details[open] section p:last-of-type{
-	font-weight: 400;
-	color: var(--gray);
-}
-
-header nav ul li details[open] section div{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	background-color: unset;
-}
-header nav ul li details[open] section div button{
-	border: solid 1px var(--color-text-primairy);
-	padding: 0 2rem;
-	border-radius: 64px;
-	min-height: 3.5rem;
-	text-align: center;
-	font-size: var(--fontsize-p);
-	
-}
-
-header nav ul li details[open] section div button:nth-of-type(1){
-background-color: var(--lightgray);
-color: var(--drakgray);
-border: unset;
-}
-header nav ul li details[open] section div button:nth-of-type(2){
-	background-color: unset;
 }
 
 header > ul{  /* Hoe spreek ik deze specifiek aan en niet de andere ul in de header die daar boven staat. Ik kan deze verplaatsen boven die ul in de css zodat de regels worden overschreven maar ik moet ook een andere manier zijn */
@@ -344,31 +258,6 @@ header ul li a{
 /****************/
 /* main styling */
 /****************/ 
-/* ul 1 */
-
-main > ul{
-	display: flex;
-	flex-direction: row;
-	overflow-x: scroll;
-	padding-left: 0;
-	margin: 0;
-}
-main > ul li{
-	min-width: max-content;
-	
-	
-}
-main > ul li a{
-	min-height: 3.5rem;
-	padding:  0 2rem;
-}
-
-main > ul:nth-of-type(1) li:nth-of-type(1) a{
-	background-color: var(--lightgray);
-	font-size: var(--fontsize-p);
-}
-
-
 
 /* section 1 */
 
@@ -377,131 +266,14 @@ main section:first-of-type{
 }
 main h1{
 	margin-bottom: 2.5rem;
-}
-
-main h1 span{
-	color: var(--blue);
-}
-
-main section:first-of-type aside{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-main section:first-of-type aside p{
-	margin: 1rem  0 0 1rem;
-}
-main section:first-of-type aside h2{
-	margin: 0  0 3rem 1rem;
-}
-main section:first-of-type aside > button{
-	margin-top: 3rem;
-	border: unset;
-	background: unset;
-	width: 35%;
-}
-
-main section:first-of-type aside > button:active{
-	filter: invert();
-	transform: scale(1.1);
-}
-
-main section:first-of-type aside section{
-	position: relative;
-	background-color: var(--blue);
-	color: var(--color-text-secundairy);
-	font-weight: 700;
-	border-radius: .5rem;
-	display: flex;
-	flex-wrap: wrap;
-	box-shadow: 0px 4px 16px rgba(0,0,0,.1);
-
 
 }
-main section:first-of-type aside section div{
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	justify-content: space-between;
-	
-}
-
-main section:first-of-type aside section div:nth-of-type(1){
-	flex-direction: column;
-	border-bottom: solid .5rem var(--yellow);
-}
-main section:first-of-type aside section div:nth-of-type(2){
-	background-color:var(--color-background-primairy);
-	color: var(--darkgray);
-	align-items: flex-end;
-	border-bottom-left-radius: .5rem;
-	border-bottom-right-radius: .5rem;
-	padding-bottom: .5rem;
-}
-main section:first-of-type aside section div button{
-	position: absolute;
-	border: none;
-	fill: var(--color-text-secundairy);
-	background-color: var(--blue);
-	right: 5px;
-	top: 5px;
-}
-
-
-main section:first-of-type aside section img{
-	height: 83px;
-	width: 83px;
-	margin-right: .75rem;
-	margin: .75rem .75rem .75rem 0;
-
-}
-.static{
-	overflow-y: hidden ;
-}
-.popup{
-	overflow: hidden;
-	animation: card 5s ease 1 forwards;
-}
-
-@keyframes card {
-	0%{
-		overflow: auto;
-	}
-	100%{
-		transform: rotate(90deg) scale(1.2);
-		background-color: #111;
-		top: 0;
-		left: 0;
-		z-index: 2;
-		display: block !important;
-		overflow: auto;
-
-	}
-}
-
-/* ul 2 */
-
-main > ul:nth-of-type(2) li{
-	background-color: var(--lightgray);
-	color: var(--color-text-primairy);
-	margin-right: .5rem;
-	margin-top: 2rem;
-	min-height: 12rem;
-	min-width: 20rem;
-	padding: 1.5rem;
-}
-
-main > ul:nth-of-type(2) li a{
-	padding: 1rem;
-	margin-top: 2rem;
-}
-
-
 
 /* section 2 */
 
 main section:nth-of-type(2){
 	position: relative;
+
 }
 main section:nth-of-type(2) section{
 	display: flex;
@@ -509,58 +281,9 @@ main section:nth-of-type(2) section{
 	overflow-x: scroll;
 	overflow-y: hidden;
 	height: auto;
-}
-main section:nth-of-type(2) > article{
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	background-color: var(--lightgray);
-	border-radius: 0.3rem;
-
-}
-
-main section:nth-of-type(2) > article div:nth-of-type(1) img{
-	width: 100%;
-	height: 12rem;
-	object-fit: cover;
-	border-top-left-radius: 0.3rem;
-	border-top-right-radius: 0.3rem;
-}
-
-main section:nth-of-type(2) > article div:nth-of-type(1) p{
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	background-color: var(--color-background-primairy);
-	color: var(--color-text-primairy);
-	padding: 1rem;
-	border-radius: 10rem;
-}
-main section:nth-of-type(2) > article h3, main section:nth-of-type(2) > article p, main > article ul li *:not(img){
-	padding: 0 2rem 0 2rem;
-}
-main section:nth-of-type(2) > article p a{
-	text-decoration: underline;
-	background-color: unset;
-}
-
-main section:nth-of-type(2) > article div:nth-of-type(2){
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	
-}
 
-main section:nth-of-type(2) > article div:nth-of-type(2) a, main > article:nth-of-type(1) ul li a{
-	background-color: var(--color-background-secundairy);
-	color: var(--color-text-secundairy);
-	padding: 0 5rem 0 5rem;
-	min-height: 3.5rem;
 }
-main section:nth-of-type(2) > article div:nth-of-type(2) p{
-	text-decoration: underline;
-}
-
 
 main section:nth-of-type(2) section article{
 	height: 697px;
@@ -639,51 +362,7 @@ main section:nth-of-type(2) section article:nth-of-type(1) h3{
 	line-height: 1.778;
 }
 
-/* article 1 */
-main > article ul{
-	display: flex;
-	flex-direction: row;
-	padding-left: 0;
-	overflow-x: scroll;
-}
-main > article ul li div{
-	padding: 2rem;
-	display: flex;
-	flex-direction: column;
-	min-height: calc(100% - 12rem);
-	justify-content: space-between;
-}
-main > article ul li div *{
-	margin: 0;
-	padding: 0;
-
-}
-
-main > article ul li{
-	margin-right: 2rem;
-	background-color: var(--lightgray);
-	min-height: 34rem;
-
-}
-
-main > article ul li a{
-	justify-content: center;
-}
-/* article 2 */
-main > article:nth-of-type(2) svg{
-	padding: 0;
-}
-
-main > article:nth-of-type(2) ul li{
-	min-height: 26rem;
-	background-color: var(--color-background-primairy);
-}
-
-main > article:nth-of-type(2) ul li img{
-	width: 80vw;
-}
 /* section 3 */
-
 
 main section:nth-of-type(3) ul{
 	display: flex;
@@ -995,31 +674,6 @@ main section:nth-of-type(8) > ul li button img{
 	color: transparent;
 	padding: 0
 }
-/* back to top en loguit */
-main > div:last-of-type  p {
-	margin: 2rem 0 2rem 0;
-}
-main > div:last-of-type > p a {
-	padding: 0;
-	text-decoration: underline;
-	font-weight: 400;
-	font-size: var(--fontsize-p);
-
-}
-
-main > div:last-of-type div {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	border-top: solid var(--lightgray) 1px ;
-}
-
-main > div:last-of-type div *{
-	background-color: unset;
-	border: unset;
-	font-weight: 700;
-
-}
 /****************/
 /* main styling */
 /****************/ 
@@ -1031,65 +685,23 @@ main > div:last-of-type div *{
 footer{
 	background-color: var(--lightgray);
 }
-footer h3{
-	margin: 0;
-}
-footer > section{
-	padding: 3rem 1rem 3rem 1rem;
-}
 
-footer > section a{
-	background-color: var(--color-background-secundairy);
-	color: var(--color-text-secundairy);
-}
 
-footer > ul{
-	display: flex;
-	flex-direction: column;
-	padding: 0 1rem 1rem 1rem;
-	margin: 0;
-}
 
-footer > ul > li{
-	border-top: solid lightgrey;
-	padding: 1.5rem 0 1.5rem 0;
-}
 
-footer > ul li details summary{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
-footer > ul li details svg{
-	transition: all ease 200ms;
-}
-footer > ul li details[open] svg{
-	transform: rotate(180deg);
-	transition: all ease 200ms;
-}
-
-footer > ul li details ul{
-	padding-left: 0;
-}
-footer > ul li details ul li a{
-	background-color: unset;
-	font-weight: 400;
-}
-
-footer div:nth-of-type(1){
+footer div:nth-of-type(2){
 	display: flex;
 	flex-direction: column;
 }
 
 
-footer div:nth-of-type(1) ul:nth-of-type(1){
+footer div:nth-of-type(2) ul:nth-of-type(1){
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	
 }
-footer div:nth-of-type(1) ul:nth-of-type(1) li{
+footer div:nth-of-type(2) ul:nth-of-type(1) li{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -1102,12 +714,12 @@ footer div:nth-of-type(1) ul:nth-of-type(1) li{
 
 }
 
-footer div:nth-of-type(1) ul:nth-of-type(1) li svg{
+footer div:nth-of-type(2) ul:nth-of-type(1) li svg{
 	fill: var(--darkgray);
 }
 
 
-footer div:nth-of-type(1) ul:nth-of-type(2){
+footer div:nth-of-type(2) ul:nth-of-type(2){
 	display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 	padding-left: 0;
@@ -1115,7 +727,7 @@ footer div:nth-of-type(1) ul:nth-of-type(2){
 	justify-items: center;
 	margin-left: 1.2rem;
 }
-footer div:nth-of-type(1) ul li a{
+footer div:nth-of-type(2) ul li a{
 	display: flex;
 	justify-content: center;
 
@@ -1123,7 +735,7 @@ footer div:nth-of-type(1) ul li a{
 	padding: 0;
 
 }
-footer div:nth-of-type(1) ul:nth-of-type(2) li a{
+footer div:nth-of-type(2) ul:nth-of-type(2) li a{
 	width: 3.125rem ; /* Deze height en width misch verbeten met min en max om het responsive te maken */
 	height: 2.25rem ;
 	border:  solid rgb(180, 178, 178) 1px;
@@ -1131,52 +743,29 @@ footer div:nth-of-type(1) ul:nth-of-type(2) li a{
 	margin: 0 1rem 1rem 0;
 }
 
-footer div:nth-of-type(1) ul:nth-of-type(2) li a img{
+footer div:nth-of-type(2) ul:nth-of-type(2) li a img{
 	min-height: 100%;
 	max-width: 100%;
 	height: auto;
 	width: auto;
 }
 
-footer div:nth-of-type(2){
+footer div:nth-of-type(3){
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
 }
 
-footer div:nth-of-type(2) a{
-	background-color: unset;
-	border: #111 solid 1px;
-}
-footer div:nth-of-type(2) div{
-	display: flex;
-	flex-direction: row;
-	border-radius: 2rem;
-	border: #111 solid 1px;
-	align-items: center;
-	padding: 0 1.5rem;
-}
-footer div:nth-of-type(2) div select{
-	appearance: none;
-	background-color: unset;
-	border: unset;
-	font-weight: 700;
-}
-footer div:nth-of-type(3) > p{
-	padding: .8rem 0 .8rem .75rem;
-	margin: 0;
-}
-footer div:nth-of-type(3) ul{
+
+footer div:nth-of-type(4) ul{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	padding-left: .75rem;
-	margin-bottom: 0;
 }
-footer div:nth-of-type(3) ul li{
+footer div:nth-of-type(4) ul li{
 	margin-right: 1.25rem;
 }
-footer div:nth-of-type(3) ul li a{
+footer div:nth-of-type(4) ul li a{
 	color: var(--darkgray);
 	padding: 0;
 	display: block;
@@ -1185,21 +774,6 @@ footer div:nth-of-type(3) ul li a{
 /******************/
 /* footer styling */
 /******************/ 
-/* @media (prefers-color-scheme: light){
-	body{
-		background-color: var(--color-background-primairy) ;
-		color: var(--color-text-primairy) ;
-}
-}
-@media (prefers-color-scheme: dark){
 
-	body *{
-		background-color: var(--color-background-secundairy) ;
-		color: var(--color-text-secundairy) ;
-		fill: var(--color-text-secundairy);
-	}
-	footer *, li *, li, article, article *{
-		background-color: var(--color-background-darkmode-secundairy) ;
-	}
-} */
+
 

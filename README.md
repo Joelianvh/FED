@@ -172,6 +172,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+  eigenwebsite is minder toegankelijk dan de orginele ikea website. Dit komt door de onzichtbare lijst skip onderdelen van de ikea website.
+
 </details>
 
 
@@ -186,6 +188,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  5 surface plane dingen
+  * Custom themes - darkmode toevoegen
+  * animations - family card animation
+  * Video/Geluid ?? ikea jingle mischien toevoegen
+  *   Meer complete mirco interacties??
+  * 
+
+   dropdown menu/ hamburger menu vallen onder? 
+   fixed header is misch iets?
+   hart icoontje iets animeren misch als extra?
+  Scroll animation toevoegen is wel te doen vgm toch? zo ja hoe
+
+
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -199,6 +214,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
+
+    articles aanpassen naar sections. en dan maar classes gebruiken D:
+    
+
 
   - punt 1
   - punt 2

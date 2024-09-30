@@ -87,7 +87,7 @@ p{
 li{
 	list-style: none;
 }
-a{
+a, button{
 	display: inline-flex;
 	align-items: center;
 
@@ -103,6 +103,10 @@ a{
 
 	background-color:var(--color-background-primairy) ;
 	color: var(--color-text-primairy);
+}
+
+button:active{
+	filter: invert();
 }
 ::-webkit-scrollbar{
 
@@ -177,14 +181,24 @@ header nav{
 	margin-top: .5rem;
 	margin-bottom: .5rem;
 	background-color: var(--color-background-primairy);
+	transition: all ease 200ms;
 }
 
 .fixed{
-	top: 0;
+	top: -100px;
 	margin-top: 0;
 	position: fixed;
 	width: 100vw;
 	z-index: 2;
+	animation: head 500ms 1 forwards;
+}
+@keyframes head {
+	0%{
+		top: -100px;
+	}
+	100%{
+		top: 0;
+	}
 }
 
 header nav img{
@@ -199,10 +213,43 @@ header nav ul{
 
 header nav ul li{
 	padding:0.5rem;
-
 }
 header nav ul li a{
 	padding: 0;
+	min-height: unset;
+}
+header nav ul li:nth-of-type(3){
+position: relative;
+}
+
+.jiggle{
+	animation: jiggle 1s 1 ease-in-out 
+}
+@keyframes jiggle {
+	0%{
+		transform: rotate(5deg) scale(1.5);
+	}
+	25%{
+		transform: rotate(70deg);
+	}
+	50%{
+		transform: rotate(0deg) ;
+	}
+	75%{
+		transform: rotate(-70deg);
+	}
+	100%{
+		transform: rotate(-5deg);
+	}
+}
+
+header nav ul li:nth-of-type(3) p{
+	position: absolute;
+	background-color: var(--blue);
+	border-radius: 200rem;
+	padding: .2rem .6rem;
+	font-size: var(--fontsize-a);
+	transform: translate(12px, -54px);
 }
 header nav ul li details{
 	left: -100vw;
@@ -211,15 +258,12 @@ header nav ul li details{
 
 header nav ul li details summary{
 	list-style: none;
-
 }
-
 header nav ul li details ul{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 }
-
 header nav ul li details[open]{
 	width: 100vw;
 	height: 100vh;
@@ -415,6 +459,7 @@ main section:first-of-type aside section{
 	display: flex;
 	flex-wrap: wrap;
 	box-shadow: 0px 4px 16px rgba(0,0,0,.1);
+	transition: all 1s ease-in-out;
 
 
 }
@@ -427,6 +472,7 @@ main section:first-of-type aside section div{
 }
 
 main section:first-of-type aside section div:nth-of-type(1){
+	
 	flex-direction: column;
 	border-bottom: solid .5rem var(--yellow);
 }
@@ -438,13 +484,68 @@ main section:first-of-type aside section div:nth-of-type(2){
 	border-bottom-right-radius: .5rem;
 	padding-bottom: .5rem;
 }
-main section:first-of-type aside section div button{
+main section:first-of-type aside section div label{
 	position: absolute;
 	border: none;
 	fill: var(--color-text-secundairy);
 	background-color: var(--blue);
 	right: 5px;
 	top: 5px;
+	width: fit-content;
+}
+main section:first-of-type aside section div input{
+	display: none;
+}
+
+main section:first-of-type aside section:has( [value="cheese"]:checked ){
+	animation: upsize 3s 1 forwards;
+
+
+}
+@keyframes upsize {
+	0%{
+		width: 335px;
+		height: 233px;
+	}
+	50%{
+		width: 100vw;
+		height: 100vh;
+		
+	}
+	100%{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 5;
+	}
+}
+
+main section:first-of-type aside section div{
+	font-size: 2em;
+}
+main section:first-of-type aside section:has( [value="cheese"]:checked ) div:nth-child(2){
+	animation: scale 3s 1 forwards;
+}
+
+@keyframes scale{
+	0%{
+
+	}
+	100%{
+		flex-direction: column-reverse;
+		justify-content: space-around ;
+		align-items: center;
+
+	}
+}
+main section:first-of-type aside section:has( [value="cheese"]:checked ) div:nth-child(2) *{
+	transition: all 3s ease;
+	margin: 0;
+}
+main section:first-of-type aside section:has( [value="cheese"]:checked ) div:nth-child(2) *{
+	transform: scale(2);
 }
 
 
@@ -454,29 +555,6 @@ main section:first-of-type aside section img{
 	margin-right: .75rem;
 	margin: .75rem .75rem .75rem 0;
 
-}
-.static{
-	overflow-y: hidden ;
-}
-.popup{
-	overflow: hidden;
-	animation: card 5s ease 1 forwards;
-}
-
-@keyframes card {
-	0%{
-		overflow: auto;
-	}
-	100%{
-		transform: rotate(90deg) scale(1.2);
-		background-color: #111;
-		top: 0;
-		left: 0;
-		z-index: 2;
-		display: block !important;
-		overflow: auto;
-
-	}
 }
 
 /* ul 2 */
@@ -721,7 +799,6 @@ main section:nth-of-type(3) ul li:last-of-type{
 } 
 main section:nth-of-type(3) ul li:last-of-type > *{
 	display: flex;
-	padding: auto;
 	margin-left: 2rem;
 	justify-content: center;
 }
@@ -837,23 +914,41 @@ main section:nth-of-type(6) ul li{
 }
 main section:nth-of-type(6) ul li img{
 	z-index: 0;
-
-	height: 19.2rem;  /* Deze height en width misch verbeten met min en max om het responsive te maken */
-	width: 12.2rem;
+	height: 19.2rem;
+	width: 15.2rem;
 	margin-right: 2rem;
 }
 
 main section:nth-of-type(6) ul li button{
 	position: absolute;
 	z-index: 1;
+	background-color: #484848;
+	opacity: .5;
+	border: none;
+	min-width: 2rem;
+	min-height: 2rem;
+	padding: .2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 main section:nth-of-type(6) ul li button:nth-of-type(1){
-	top: 0;
-	left: 0;
+	top: 5px;
+	left: 5px;
+
+
+}
+main section:nth-of-type(6) ul li button svg{
+	fill: white;
+	min-width: 1.5rem;
+	opacity: 1;
 }
 main section:nth-of-type(6) ul li button:nth-of-type(2){
-	bottom: 0;
-	left: 0;
+	bottom: 5px;
+	left: 5px;
+}
+main section:nth-of-type(6) ul li button:nth-of-type(2):active{
+	transform: scale(1.2);
 }
 
 
@@ -995,6 +1090,9 @@ main section:nth-of-type(8) > ul li button img{
 	color: transparent;
 	padding: 0
 }
+main section:nth-of-type(8) > button{
+	margin: 0 6.5rem;
+}
 /* back to top en loguit */
 main > div:last-of-type  p {
 	margin: 2rem 0 2rem 0;
@@ -1018,8 +1116,9 @@ main > div:last-of-type div *{
 	background-color: unset;
 	border: unset;
 	font-weight: 700;
-
 }
+
+
 /****************/
 /* main styling */
 /****************/ 
@@ -1185,21 +1284,103 @@ footer div:nth-of-type(3) ul li a{
 /******************/
 /* footer styling */
 /******************/ 
-/* @media (prefers-color-scheme: light){
-	body{
-		background-color: var(--color-background-primairy) ;
-		color: var(--color-text-primairy) ;
-}
-}
-@media (prefers-color-scheme: dark){
 
-	body *{
-		background-color: var(--color-background-secundairy) ;
-		color: var(--color-text-secundairy) ;
-		fill: var(--color-text-secundairy);
+body > div:first-of-type{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 3;
+}
+
+body > div:first-of-type img{
+	max-width: 40vh;
+	height: auto;
+	position: fixed;
+	animation: falling 5s infinite linear;
+}
+body > div:first-of-type img:nth-of-type(1){
+	top: -500px;
+	left: 10px;
+}
+
+body > div:first-of-type img:nth-of-type(2){
+	top: -1000px;
+	left: 100px;
+}
+
+body > div:first-of-type img:nth-of-type(3){
+	top: -1500px;
+	right: 10px;
+}
+
+body > div:first-of-type img:nth-of-type(4){
+	top: -2000px;
+	right: 100px;
+}
+
+body > div:first-of-type img:nth-of-type(5){
+	top: -2500px;
+	right: 10px;
+}
+
+body > div:first-of-type img:nth-of-type(6){
+	top: -3000px;
+}
+
+@keyframes falling{
+	0%{
+		transform: translateY(-50px) rotate(0deg);
 	}
-	footer *, li *, li, article, article *{
-		background-color: var(--color-background-darkmode-secundairy) ;
+	50%{
+
 	}
-} */
+	100%{
+		transform: translateY(3700px) rotate(720deg);
+	}
+}
+.hidden{
+	display: none !important;
+}
+
+body main > *{
+	opacity: 0;
+	transition: all 1s ease;
+	transform: translateY(100px);
+}
+
+.test{
+	opacity: 1;
+	transform: unset; /* transform moet unset worden want anders werkt de animatie van de family kaart niet meer */
+}
+
+@media (prefers-color-scheme: dark){
+	:root {
+		--color-text-primairy:#ffffff;
+		--color-text-secundairy: rgb(0, 0, 0);
+		--color-background-primairy: rgb(6, 6, 6);
+		--color-background-secundairy: rgb(255, 255, 255);
+		--color-background-darkmode-secundairy: rgb(36, 36, 36);
+		--orange: rgb(202, 80, 8);
+		--blue: rgb( 0, 124, 193); ;
+		--lightgray: rgb(61, 61, 61);
+		--gray:  rgb(48, 48, 48);
+		--darkgray: #272727;
+		--red:#cf2219;
+		--yellow:#fdd524;
+		--green:#2a943c;
+	
+	}
+	header div:first-of-type{
+		background-color: var(--color-background-primairy);
+		color: var(--color-text-primairy);
+	}
+	svg{
+		fill:var(--color-text-primairy) !important; ;
+	}
+	aside section div img, 	aside section div p, aside section div h2 {
+		filter: invert(1);
+	}
+}
 

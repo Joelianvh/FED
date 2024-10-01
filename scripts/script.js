@@ -5,7 +5,7 @@ const hamburger = document.querySelector("nav ul li details summary")
 const cameraIcon = document.querySelector("header div:nth-of-type(3) svg:nth-of-type(2)")
 const meatballDiv = document.querySelector("body > div:first-of-type")
 
-let meatballjingle = new Audio("audio/meatball_parade.mp3")
+let meatballjingle = new Audio("audio/meatball_parade.mp3") /* https://www.youtube.com/watch?v=EeXj4EEbU84 */
 
 let hamburgeroff = true
 let togglefamilycard = false
@@ -14,7 +14,7 @@ let meatballfilter = false
 function toggleFixedHeader() {
     const scrollHeight = 300
     
-    if (window.scrollY >= scrollHeight) { /*bron: MDN window.scrollY */
+    if (window.scrollY >= scrollHeight) { /*bron: MDN window.scrollY  https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY*/
         nav.classList.add('fixed')
     } else {
         nav.classList.remove('fixed')
@@ -54,7 +54,7 @@ const images = document.querySelectorAll("body main > *") /* bron: https://www.y
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry =>{
-        entry.target.classList.toggle("test", entry.isIntersecting)
+        entry.target.classList.toggle("test", entry.isIntersecting) /* https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API */
         if (entry.isIntersecting) observer.unobserve(entry.target)
     }),
         {

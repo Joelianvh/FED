@@ -399,8 +399,6 @@ main > ul{
 }
 main > ul li{
 	min-width: max-content;
-	
-	
 }
 main > ul li a{
 	min-height: 3.5rem;
@@ -411,8 +409,6 @@ main > ul:nth-of-type(1) li:nth-of-type(1) a{
 	background-color: var(--lightgray);
 	font-size: var(--fontsize-p);
 }
-
-
 
 /* section 1 */
 
@@ -427,30 +423,30 @@ main h1 span{
 	color: var(--blue);
 }
 
-main section:first-of-type aside{
+main section:first-of-type .familycard{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-main section:first-of-type aside p{
+main section:first-of-type .familycard p{
 	margin: 1rem  0 0 1rem;
 }
-main section:first-of-type aside h2{
+main section:first-of-type .familycard h2{
 	margin: 0  0 3rem 1rem;
 }
-main section:first-of-type aside > button{
+main section:first-of-type .familycard > button{
 	margin-top: 3rem;
 	border: unset;
 	background: unset;
 	width: 35%;
 }
 
-main section:first-of-type aside > button:active{
+main section:first-of-type .familycard > button:active{
 	filter: invert();
 	transform: scale(1.1);
 }
 
-main section:first-of-type aside section{
+main section:first-of-type .familycard section{
 	position: relative;
 	background-color: var(--blue);
 	color: var(--color-text-secundairy);
@@ -463,20 +459,19 @@ main section:first-of-type aside section{
 
 
 }
-main section:first-of-type aside section div{
+main section:first-of-type .familycard section div{
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 	justify-content: space-between;
-	
 }
 
-main section:first-of-type aside section div:nth-of-type(1){
+main section:first-of-type .familycard section div:nth-of-type(1){
 	
 	flex-direction: column;
 	border-bottom: solid .5rem var(--yellow);
 }
-main section:first-of-type aside section div:nth-of-type(2){
+main section:first-of-type .familycard section div:nth-of-type(2){
 	background-color:var(--color-background-primairy);
 	color: var(--darkgray);
 	align-items: flex-end;
@@ -484,7 +479,7 @@ main section:first-of-type aside section div:nth-of-type(2){
 	border-bottom-right-radius: .5rem;
 	padding-bottom: .5rem;
 }
-main section:first-of-type aside section div label{
+main section:first-of-type .familycard section div label{
 	position: absolute;
 	border: none;
 	fill: var(--color-text-secundairy);
@@ -493,14 +488,12 @@ main section:first-of-type aside section div label{
 	top: 5px;
 	width: fit-content;
 }
-main section:first-of-type aside section div input{
+main section:first-of-type .familycard section div input{
 	display: none;
 }
 
-main section:first-of-type aside section:has( [value="cheese"]:checked ){
+main section:first-of-type .familycard section:has( [value="cheese"]:checked ){
 	animation: upsize 3s 1 forwards;
-
-
 }
 @keyframes upsize {
 	0%{
@@ -522,10 +515,10 @@ main section:first-of-type aside section:has( [value="cheese"]:checked ){
 	}
 }
 
-main section:first-of-type aside section div{
+main section:first-of-type .familycard section div{
 	font-size: 2em;
 }
-main section:first-of-type aside section:has( [value="cheese"]:checked ) div:nth-child(2){
+main section:first-of-type .familycard section:has( [value="cheese"]:checked ) div:nth-child(2){
 	animation: scale 3s 1 forwards;
 }
 
@@ -540,21 +533,20 @@ main section:first-of-type aside section:has( [value="cheese"]:checked ) div:nth
 
 	}
 }
-main section:first-of-type aside section:has( [value="cheese"]:checked ) div:nth-child(2) *{
+main section:first-of-type .familycard section:has( [value="cheese"]:checked ) div:nth-child(2) *{
 	transition: all 3s ease;
 	margin: 0;
 }
-main section:first-of-type aside section:has( [value="cheese"]:checked ) div:nth-child(2) *{
+main section:first-of-type .familycard section:has( [value="cheese"]:checked ) div:nth-child(2) *{
 	transform: scale(2);
 }
 
 
-main section:first-of-type aside section img{
+main section:first-of-type .familycard section img{
 	height: 83px;
 	width: 83px;
 	margin-right: .75rem;
 	margin: .75rem .75rem .75rem 0;
-
 }
 
 /* ul 2 */
@@ -574,8 +566,6 @@ main > ul:nth-of-type(2) li a{
 	margin-top: 2rem;
 }
 
-
-
 /* section 2 */
 
 main section:nth-of-type(2){
@@ -594,7 +584,6 @@ main section:nth-of-type(2) > article{
 	flex-direction: column;
 	background-color: var(--lightgray);
 	border-radius: 0.3rem;
-
 }
 
 main section:nth-of-type(2) > article div:nth-of-type(1) img{
@@ -626,7 +615,6 @@ main section:nth-of-type(2) > article div:nth-of-type(2){
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	
 }
 
 main section:nth-of-type(2) > article div:nth-of-type(2) a, main > article:nth-of-type(1) ul li a{
@@ -780,7 +768,6 @@ main section:nth-of-type(3) ul li{
 main section:nth-of-type(3) ul li img{
 	height: 100%;
 	width: 100%;
-
 	top: 0;
 	left: 0;
 }
@@ -794,8 +781,6 @@ main section:nth-of-type(3) ul li:last-of-type{
 	background-color: var(--blue);
 	color: var(--color-text-secundairy);
 	justify-content: flex-start;
-
-
 } 
 main section:nth-of-type(3) ul li:last-of-type > *{
 	display: flex;
@@ -823,19 +808,15 @@ main section:nth-of-type(4) ul{
 }
 
 main section:nth-of-type(4) ul li{
-
-
 	display: flex;
 	flex-direction: column;
 	align-content: space-between;
 	justify-content: space-around;
 	align-items: center;
 	text-align: center;
-
 	margin: .525rem;
 	height: 19.2em;
 	min-width: 14.4em;
-
 }
 main section:nth-of-type(4) ul li h3{
 	font-size: 1.75rem;
@@ -905,7 +886,6 @@ main section:nth-of-type(6) ul{
 	flex-direction: row;
 	overflow-x: scroll;
 	padding-left: 0;
-
 }
 
 main section:nth-of-type(6) ul li{
@@ -935,8 +915,6 @@ main section:nth-of-type(6) ul li button{
 main section:nth-of-type(6) ul li button:nth-of-type(1){
 	top: 5px;
 	left: 5px;
-
-
 }
 main section:nth-of-type(6) ul li button svg{
 	fill: white;
@@ -965,7 +943,7 @@ main section:nth-of-type(7) ul{
 }
 
 main section:nth-of-type(7) ul li{
-	height: 19.2rem; /* Deze height en width misch verbeten met min en max om het responsive te maken */
+	height: 19.2rem; 
 	min-width: 12.2rem;
 	display: flex;
 	flex-direction: column;
@@ -974,7 +952,6 @@ main section:nth-of-type(7) ul li{
 
 	background-color: var(--lightgray);
 	margin-right: 2rem;
-	
 }
 
 main section:nth-of-type(7) ul li > svg{
@@ -1379,7 +1356,10 @@ body main > *{
 	svg{
 		fill:var(--color-text-primairy) !important; ;
 	}
-	aside section div img, 	aside section div p, aside section div h2 {
+	main section:nth-of-type(2) section article:nth-of-type(2) svg{
+		fill: var(--color-text-secundairy) !important;
+	}
+	.familycard section div img, 	.familycard section div p, .familycard section div h2 {
 		filter: invert(1);
 	}
 }

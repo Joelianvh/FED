@@ -39,12 +39,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
     https://www.ikea.com/nl/nl/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  Ikea homepagine  
+  Ikea homepagina  
   <img src="readme-images/ikea_website-screenshot.jpg" width="375px" alt="De voorpagina van de ikea website op een samsung s24 ultra">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/ikea_family-screenshot.jpg" width="375px" alt="De family pas pagina van de ikea website op een samsung s24 ultra">
+  Account pagina
+  <img src="readme-images/ikea_family-screenshot.jpg" width="375px" alt="De account pagina van de ikea website op een samsung s24 ultra">
  
 </details>
 
@@ -75,13 +75,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdown_schets.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/dynamisch_deel.png" width="375px" alt="breakdown van een dynamisch deel">
 
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -113,14 +111,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
+  mijn vragen voor de meeting:
+  input prompt in search bar? hoe werkt dat
+  Dropdown menu's? geen idee hoe ik dat via css kan doen
+  kan ik gewoon de svg's gebruiken voor de icoontjes van de ikea website zelf?
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - veel meer unorderd lists gebruiken inplaats van div's
+  - detail[open] kan ik gebruiken voor de dropdown's of als ik wil met javasscript
+  - gewoon svg jatten van de ikea website zelf
+  - input prompt wordt gedaan als attribute van de input element met placeholder
 
 </details>
 
@@ -135,17 +137,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Ben goed op weg met de eerste pagina. de vormgeving ziet er al goed uit als de ikea website zelf. Moet nog beginnen aan de tweede pagina. 
+  <img src="readme-images/eerste_pagina.png">
+  Ik heb nog geen classes gebruikt waar ik trots op ben
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+  Ik wil nog een keer vragen hoe details[open] werkt met summary enzo want snap de styling ervan niet
+  hoe kan ik het hamburger menu maken? met of zonder javascript
+  
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
@@ -153,9 +153,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   summary details hamburger menu readme surface plain 5 verschillende dingen
   variable gebruiken voor afstanden, fonts, padding.
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - ik moet 5 onderdelen bedenken voor de surface plain
+  - Summary details is uitgelegd en kan hier weer mee door
+  - ik zou nog variable kunnen gebruiken voor padding, fontsize en afstanden
 - ...
 
 </details>
@@ -173,6 +173,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
   eigenwebsite is minder toegankelijk dan de orginele ikea website. Dit komt door de onzichtbare lijst skip onderdelen van de ikea website.
+  Ik heb niet veel tijd besteed aan het onderzoeken hoe ik de toegankelijkheid kan verbeteren, want heb nog een hoop te doen om tenminste op de surface plain te komen.
 
 </details>
 
@@ -187,7 +188,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  tot nu toe eigenlijk de hele html en styling af van de websites. nog veel punjtes op de i zetten. 
+  <img src="readme-images/details_open.png">
+  heb veel de details[open] gebruikt en kan er nu goed mee op weg.
 
+
+
+  ### Agenda voor meeting
+
+  vragen voor de meeting:
+  
   5 surface plane dingen
   * Custom themes - darkmode toevoegen
   * animations - family card animation
@@ -200,29 +210,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
    hart icoontje iets animeren misch als extra?
   Scroll animation toevoegen is wel te doen vgm toch? zo ja hoe
 
-
-
-  ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
-
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-    articles aanpassen naar sections. en dan maar classes gebruiken D:
-    
+  articles aanpassen naar sections. en dan maar classes gebruiken D:
+  mijn aside moet ik veranderen naar een section ook. en dan daar ook een class gebruiken. 
 
+  5 surface plane dingen
+  * darkmode toevoegen
+  * animations - family card animation
+  * :has() functie gebruiken
+  * leuke easteregg knop toevoegen 
+  * scroll stylen doen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
 
 </details>
 
@@ -264,8 +264,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API 
+  2. (https://www.youtube.com/watch?v=2IbRtjez6ag)
+  3. https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY 
+  4. https://www.youtube.com/watch?v=EeXj4EEbU84 
 
 </details>
